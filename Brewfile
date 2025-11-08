@@ -1,0 +1,17 @@
+tap "mongodb/brew"
+brew "bat"
+brew "cmake"
+brew "fzf"
+brew "htop"
+brew "httpie"
+brew "lazydocker"
+brew "lazygit"
+brew "neofetch"
+brew "pipx"
+brew "postgresql@14", restart_service: :changed
+brew "redis", restart_service: :changed
+brew "tmux"
+brew "tree"
+brew "wget"
+brew "mongodb/brew/mongodb-community"
+cask "font-caskaydia-cove-nerd-font"
