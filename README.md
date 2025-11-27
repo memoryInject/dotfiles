@@ -14,7 +14,7 @@
 3 - Activate the Alias & Set Config: Run these two commands to activate the alias in your current session and tell it to ignore all the other files in your home directory.
 ```bash
 	source ~/.zshrc
-	gitdot gitdot --local status.showUntrackedFiles no
+	gitdot config --local status.showUntrackedFiles no
 ```
 
 
@@ -27,7 +27,7 @@
 2.  Source the file and set the "hide untracked files" config:
     ```bash
     source ~/.zshrc
-    gitdot gitdot --local status.showUntrackedFiles no
+    gitdot config --local status.showUntrackedFiles no
     ```
 
 3.  Check out your files into your home directory:
