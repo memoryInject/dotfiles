@@ -1,7 +1,7 @@
 # Makefile
 
 # Change this to the repo you want to clone
-REPO_URL = https://github.com/username/reponame.git
+REPO_URL = https://github.com/memoryInject/macbook-init.git
 # Extract repo name from URL
 REPO_NAME = $(notdir $(basename $(REPO_URL)))
 # Destination folder

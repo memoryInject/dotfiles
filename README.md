@@ -21,7 +21,7 @@
 ## Usage
 1.  Clone the bare repository:
     ```bash
-    git clone --bare git@github.com:YOUR_USERNAME/dotfiles.git $HOME/.dotfiles
+    git clone --bare https://github.com/memoryInject/dotfiles.git $HOME/.dotfiles
     ```
 
 2.  Source the file and set the "hide untracked files" config:

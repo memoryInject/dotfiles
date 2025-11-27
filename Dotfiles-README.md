@@ -110,10 +110,3 @@ Some applications need to be installed manually before their configs can be used
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
-
-## TODO
-    - makefile for all this setup.
-    - modify dir-bookmark to install with one commanad like | bash
-
-
-* (Add any other steps here, like setting macOS defaults, etc.)
