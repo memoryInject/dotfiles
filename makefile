@@ -14,7 +14,7 @@ MAIN_SCRIPT = $(DEST_DIR)/src/main.py
 # Clone the repository into ~/python/reponame
 init:
 	@echo "Cloning $(REPO_URL) into $(DEST_DIR)..."
-	@mkdir -p $(HOME)/python
+	@mkdir -p $(HOME)/.local/share
 	@if [ ! -d "$(DEST_DIR)" ]; then \
 		git clone $(REPO_URL) $(DEST_DIR); \
 	else \
