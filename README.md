@@ -24,19 +24,24 @@
     git clone --bare https://github.com/memoryInject/dotfiles.git $HOME/.dotfiles
     ```
 
-2.  Source the file and set the "hide untracked files" config:
+2. Setup the alias
+```bash
+	echo "alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+```
+
+3.  Source the file and set the "hide untracked files" config:
     ```bash
     source ~/.zshrc
     gitdot config --local status.showUntrackedFiles no
     ```
 
-3.  Check out your files into your home directory:
+4.  Check out your files into your home directory:
     ```bash
     gitdot checkout
     ```
     *If this fails due to existing files, either delete them or force it with `gitdot checkout -f`.*
 
-4.  Run the main script:
+5.  Run the main script:
     ```bash
     make run
     ```
