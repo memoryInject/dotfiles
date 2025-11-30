@@ -40,6 +40,38 @@ Some applications need to be installed manually before their configs can be used
     2. Drag the application to your `/Applications` folder.
     3. Run docker
 
+## 2.1 SSH for Github Setup
+- Run the following command with email address associated with GitHub account.
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+- when prompted:
+    - Accept default file locaion
+    - skip passphrase
+
+- The command will generate two files in `~/.ssh` directory:
+    - `id_ed25519` (your private key - keep this secret)
+    - `id_ed25519.pub` (your public key - this is what you share with GitHub)
+
+- Start the SSH Agent and Add Key
+The `ssh-agent` manages private keys and securely handles the authentiation.
+    - Start the `ssh-agent` in the background:
+        ```bash
+        eval "$(ssh-agent -s)"
+        ```
+
+    - Add your private key to the `ssh-agent` and store the passphrase in your macOS Keychain so you don't have to enter it every time:
+        ```bash
+        ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+        ```
+
+- Add the Public Key to Github Account
+    - Copy public key
+        ```bash
+        pbcopy < ~/.ssh/id_ed25519.pub
+        ```
+
 ## 3. Homebrew (Managed) Installations
 
 1.  Install Homebrew:
